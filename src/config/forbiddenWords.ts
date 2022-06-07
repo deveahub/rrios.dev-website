@@ -1,0 +1,25 @@
+const FORBIDDEN_WORDS = [
+  'ABUSE',
+  'ASPHYXIA',
+  'BEHEAD',
+  'BLEED',
+  'BLOOD',
+  'CHILD',
+  'CHILDREN',
+  'CHOKE',
+  'CHOKING',
+  'DECAPITATION',
+  'DRUGGED',
+  'FORCED',
+  'KID',
+  'KILL',
+  'LOLI',
+  'MURDER',
+  'RAPE',
+  'SHOTA',
+  'SNUFF',
+  'STRANGLE',
+  'TORTURE',
+];
+
+export default FORBIDDEN_WORDS;

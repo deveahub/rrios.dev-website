@@ -1,0 +1,86 @@
+
+name: Pull Request
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+    types: [opened, synchronize]
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install Dependencies
+        run: yarn install --pure-lockfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_READ }}
+          GA_TOKEN: ${{ secrets.GA_TOKEN }}
+
+  lint:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: |
+            node_modules
+            **/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: yarn lint
+
+  # build:
+  #   needs: [lint]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/cache@v2
+  #       id: cache
+  #       with:
+  #         path: |
+  #           node_modules
+  #           **/node_modules
+  #         key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+  #     - run: yarn build
+
+  # slack-error:
+  #   name: Notify Error in slack
+  #   if: ${{ failure()}}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Slack Workflow Notification
+  #       uses: come25136/workflow-notification-for-slack@main
+  #       with:
+  #         repo_token: ${{secrets.RRIOS_DEV_GITHUB_REPOSITORY }}
+  #         slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+  #         channel: porner-deploy-ci
+  #         name: Porner Pull Request
+  #         icon_emoji: ':white_check_mark:'
+  slack-success:
+    needs: [lint]
+    name: Notify Error in slack
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Workflow Notification
+        uses: come25136/workflow-notification-for-slack@main
+        with:
+          repo_token: ${{secrets.RRIOS_DEV_GITHUB_REPOSITORY }}
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          channel: porner-deploy-ci
+          name: Porner Pull Request
+          icon_emoji: ':white_check_mark:'
