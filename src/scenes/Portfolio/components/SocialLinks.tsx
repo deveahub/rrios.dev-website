@@ -8,19 +8,19 @@ const Icon = styled('a', {
 	size: 4,
 	display: 'flex',
 	justifyContent: 'center',
-	alignItems: 'center',
+	alignItems: 'flex-end',
 });
 
 const SocialLinks = () => (
 	<Stack spacing={2}>
 		<Icon href="https://twitter.com/rriosper" target="_blank">
-			<Twitter size={24} />
+			<Twitter size={22} />
 		</Icon>
 		<Icon href="https://github.com/rriosper" target="_blank">
-			<GitHub size={24} />
+			<GitHub height={22} />
 		</Icon>
 		<Icon href="https://github.com/rriosper" target="_blank">
-			<Image src="/img/mediumIcon.svg" width={24} height={24} />
+			<Image layout="fixed" src="/img/mediumIcon.svg" width={24} height={24} />
 		</Icon>
 		<Icon href="mailto:contact@rrios.dev?subject=Hello from portfolio">
 			<Mail size={24} />
