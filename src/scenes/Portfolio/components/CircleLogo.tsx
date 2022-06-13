@@ -2,57 +2,86 @@ import Stack from '@/components/Stack';
 import Text from '@/components/Text';
 import { keyframes, styled } from '@/styles';
 
-const beforeElementAnimation = keyframes({
-	from: {
-		transform: 'translate(0, 0) rotate(-360deg)',
-	},
+const textAnim = keyframes({
 	to: {
-		transform: 'translate(1px, 1px) rotate(360deg)',
+		transform: 'translate(0, -2px)',
 	},
 });
 
 const afterElementAnimation = keyframes({
-	from: {
-		transform: 'translate(0, 0) rotate(360deg)',
-	},
 	to: {
-		transform: 'translate(1px, 1px) rotate(-360deg)',
+		transform: 'translate(0, 2px)',
 	},
 });
 
-const circleBomAnimation = keyframes({
+const beforeElementAnimation = keyframes({
 	to: {
-		transform: 'scale(1.1)',
+		transform: 'translate(0, 4px)',
+	},
+});
+
+const beforeCircleElementAnimation = keyframes({
+	'0%': {
+		opacity: 1,
+	},
+	'50%': {
+		opacity: 0.4,
+	},
+	'100%': {
+		opacity: 1,
+		transform: 'rotate(360deg)',
 	},
 });
 
 const Circle = styled(Stack, {
 	size: 20,
-	border: '6px solid $colors$text',
+	border: '6px solid transparent',
 	borderRadius: '100%',
 	justifyContent: 'center',
 	alignItems: 'center',
 	fontSize: '3rem',
 	position: 'relative',
-	animationName: circleBomAnimation.name,
-	animationDuration: '0.6s',
-	animationDirection: 'alternate',
-	animationIterationCount: 'infinite',
-	animationTimingFunction: 'linear',
-	animationPlayState: 'running',
+	backgroundColor: '$bg-dark-0',
+
+	backgroundClip: 'padding-box',
+
+	'&:before': {
+		content: '',
+		position: 'absolute',
+		top: 0,
+		left: 0,
+		right: 0,
+		bottom: 0,
+		zIndex: -1,
+		margin: '-6px',
+		borderRadius: 'inherit',
+		background:
+			'linear-gradient(0deg, white, white, 40%, blue, red,50%, white 90%, blue, red)',
+		animationName: beforeCircleElementAnimation.name,
+		animationDuration: '1.3s',
+		animationIterationCount: 'infinite',
+		animationTimingFunction: 'linear',
+		animationPlayState: 'running',
+	},
 });
 
 const CircleText = styled(Text, {
 	position: 'relative',
 	zIndex: 1,
+	animationName: textAnim.name,
+	animationDuration: '1.3s',
+	animationIterationCount: 'infinite',
+	animationTimingFunction: 'ease-out',
+	animationDirection: 'alternate',
+	animationPlayState: 'running',
 
 	'&::before, &::after': {
 		zIndex: -1,
 		animationDuration: '1.3s',
 		animationIterationCount: 'infinite',
+		animationDirection: 'alternate',
 		animationTimingFunction: 'linear',
 		animationPlayState: 'running',
-		opacity: 0.3,
 		content: '</>',
 		position: 'absolute',
 	},

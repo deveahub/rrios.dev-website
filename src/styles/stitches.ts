@@ -9,6 +9,7 @@ export type { ComponentProps, VariantProps } from '@stitches/react';
 export const breakpoints = {
   root: '(min-width: 0px)',
   bp1: '(min-width: 520px)',
+  bp13: '(min-width: 580px)',
   bp15: '(min-width: 750px)',
   bp2: '(min-width: 1030px)',
   bp3: '(min-width: 1200px)',

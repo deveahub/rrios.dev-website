@@ -13,10 +13,12 @@ export const TooltipTrigger = styled(Trigger, {
   border: 'none',
   cursor: 'inherit',
   backgroundColor: 'transparent',
+  padding: 0,
 });
 
 export const TooltipContent = styled(Content, {
-  backgroundColor: '$bg',
+  backgroundColor: '$text',
+  color: '$bg',
   p: 0.5,
   borderRadius: '$sm',
   boxShadow: '$sm',

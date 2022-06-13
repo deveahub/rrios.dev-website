@@ -14,6 +14,15 @@ const Stack = styled('div', {
       },
     },
     justifyContent: {
+      spaceBetween: {
+        justifyContent: 'space-between',
+      },
+      spaceAround: {
+        justifyContent: 'space-around',
+      },
+      spaceEvenly: {
+        justifyContent: 'space-evenly',
+      },
       center: {
         justifyContent: 'center',
       },
@@ -25,6 +34,15 @@ const Stack = styled('div', {
       },
     },
     alignItems: {
+      spaceBetween: {
+        alignItems: 'space-between',
+      },
+      spaceAround: {
+        alignItems: 'space-around',
+      },
+      spaceEvenly: {
+        alignItems: 'space-evenly',
+      },
       center: {
         alignItems: 'center',
       },
@@ -36,6 +54,9 @@ const Stack = styled('div', {
       },
     },
     spacing: {
+      0: {
+        gap: 0,
+      },
       1: {
         gap: 1,
       },
@@ -57,13 +78,28 @@ const Stack = styled('div', {
       7: {
         gap: 7,
       },
+      8: {
+        gap: 8,
+      },
+      9: {
+        gap: 9,
+      },
+      10: {
+        gap: 10,
+      },
     },
     direction: {
       column: {
         flexDirection: 'column',
       },
+      columnReverse: {
+        flexDirection: 'column-reverse',
+      },
       row: {
         flexDirection: 'row',
+      },
+      rowReverse: {
+        flexDirection: 'row-reverse',
       },
     },
   },
