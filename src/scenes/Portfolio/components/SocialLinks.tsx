@@ -28,19 +28,22 @@ const Container = styled(Stack, {
 
 const SocialLinks = () => (
   <Container>
-    <Icon href="https://twitter.com/rriosdev" target="_blank">
+    <Icon title="twitter" href="https://twitter.com/rriosdev" target="_blank">
       <Twitter size={22} />
     </Icon>
-    <Icon href="https://github.com/rriosper" target="_blank">
+    <Icon title="github" href="https://github.com/rriosper" target="_blank">
       <GitHub height={22} />
     </Icon>
-    <Icon href="https://github.com/rriosper" target="_blank">
+    <Icon title="medium" href="https://github.com/rriosper" target="_blank">
       <img alt="medium" src="/img/mediumIcon.svg" />
     </Icon>
-    <Icon href="https://www.linkedin.com/in/rriosper/">
+    <Icon title="linkedin" href="https://www.linkedin.com/in/rriosper/">
       <Linkedin size={24} />
     </Icon>
-    <Icon href="mailto:contact@rrios.dev?subject=Hello from portfolio">
+    <Icon
+      title="mail"
+      href="mailto:contact@rrios.dev?subject=Hello from portfolio"
+    >
       <Mail size={24} />
     </Icon>
   </Container>

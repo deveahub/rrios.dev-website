@@ -8,7 +8,12 @@ import WorkItemLink from '../components/WorkItemLink';
 const WorksSection = () => (
   <Section>
     <SectionTitle>I have worked in</SectionTitle>
-    <SectionContent direction="row" spacing={2} justifyContent="center">
+    <SectionContent
+      direction="row"
+      spacing={2}
+      justifyContent="center"
+      css={{ flexWrap: 'wrap' }}
+    >
       <WorkItemLink
         src="/img/tech-companies/sewan.webp"
         tooltip="Sewan telecommunications"

@@ -17,10 +17,16 @@ interface WorkItemLinkProps {
 const WorkItemLink = ({ src, tooltip, href }: WorkItemLinkProps) => (
   <TooltipProvider delayDuration={0}>
     <TooltipRoot>
-      <TooltipTrigger>
+      <TooltipTrigger title={tooltip}>
         <Link href={href} passHref>
           <a target="_blank">
-            <Image layout="fixed" src={src} width={150} height={150} />
+            <Image
+              alt={`${tooltip}-img`}
+              layout="fixed"
+              src={src}
+              width={150}
+              height={150}
+            />
           </a>
         </Link>
       </TooltipTrigger>

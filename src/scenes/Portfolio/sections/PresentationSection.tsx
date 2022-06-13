@@ -88,7 +88,13 @@ const PresentationSection = () => (
         </Stack>
       </Stack>
       <ImageContainer>
-        <Image layout="fixed" src="/img/me.jpeg" width={200} height={200} />
+        <Image
+          alt="me-img"
+          layout="fixed"
+          src="/img/me.jpeg"
+          width={200}
+          height={200}
+        />
       </ImageContainer>
     </Stack>
   </Stack>
