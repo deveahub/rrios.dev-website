@@ -29,8 +29,6 @@ const Portfolio = () => (
     </Text>
     <TechSection />
     <WorksSection />
-    {/* <MyPostsSection />
-    <PersonalProjectsSection /> */}
     <Stack as="footer">© Roberto Ríos, 2022</Stack>
   </Layout>
 );

@@ -7,26 +7,26 @@ import AppHead from '@/scenes/App/AppHead';
 import { globalStyles } from '@/styles';
 
 interface Props extends AppProps {
-	Component: FC<any>;
-	pageProps: {
-		fallback?: Record<string, unknown>;
-	};
+  Component: FC<any>;
+  pageProps: {
+    fallback?: Record<string, unknown>;
+  };
 }
 
 function App({ Component, pageProps: { fallback, ...pageProps } = {} }: Props) {
-	globalStyles();
+  globalStyles();
 
-	const component = <Component {...pageProps} />;
-	const enhancedComponent = fallback
-		? withSWRConfig(fallback, component)
-		: component;
+  const component = <Component {...pageProps} />;
+  const enhancedComponent = fallback
+    ? withSWRConfig(fallback, component)
+    : component;
 
-	return (
-		<>
-			<AppHead />
-			{enhancedComponent}
-		</>
-	);
+  return (
+    <>
+      <AppHead />
+      {enhancedComponent}
+    </>
+  );
 }
 
 export default appWithTranslation(App as FC);

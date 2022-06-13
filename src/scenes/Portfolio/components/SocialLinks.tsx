@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import { GitHub, Linkedin, Mail, Twitter } from 'react-feather';
 
 import Stack from '@/components/Stack';
@@ -9,6 +9,11 @@ const Icon = styled('a', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'flex-end',
+
+  '& img': {
+    width: 24,
+    height: 24,
+  },
 });
 
 const Container = styled(Stack, {
@@ -30,7 +35,7 @@ const SocialLinks = () => (
       <GitHub height={22} />
     </Icon>
     <Icon href="https://github.com/rriosper" target="_blank">
-      <Image layout="fixed" src="/img/mediumIcon.svg" width={24} height={24} />
+      <img alt="medium" src="/img/mediumIcon.svg" />
     </Icon>
     <Icon href="https://www.linkedin.com/in/rriosper/">
       <Linkedin size={24} />
