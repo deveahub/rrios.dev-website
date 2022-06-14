@@ -6,7 +6,9 @@ const Layout = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   gap: 4,
-  p: 2,
+  px: 1,
+  pt: 3,
+  pb: 2,
 });
 
 export default Layout;

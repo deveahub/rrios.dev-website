@@ -6,11 +6,7 @@ import CircleLogo from '@/scenes/Portfolio/components/CircleLogo';
 import { styled } from '@/styles';
 
 const ImageContainer = styled('div', {
-  // display: 'none',
   display: 'block',
-
-  // '@bp13': {
-  // },
 });
 
 const PresentationSection = () => (
@@ -58,7 +54,8 @@ const PresentationSection = () => (
           whiteSpace: 'nowrap',
           height: 200,
           maxHeight: 200,
-          p: 2,
+          py: 2,
+          px: 3,
         }}
       >
         <Text
