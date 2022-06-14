@@ -8,6 +8,10 @@ const globalStyles = globalCss({
     fontStyle: 'normal',
     fontDisplay: 'swap',
   },
+  '*::selection': {
+    color: '$bg',
+    background: '$text-dark-0',
+  },
   '*, *::before, *::after': {
     boxSizing: 'border-box',
   },
@@ -40,7 +44,7 @@ const globalStyles = globalCss({
   'input:focus-visible, button:focus-visible, a:focus-visible, select:focus-visible':
     {
       outlineStyle: 'solid',
-      outlineColor: '$primary',
+      outlineColor: '$text',
       outlineWidth: 2,
       outlineOffset: 0,
     },

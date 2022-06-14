@@ -17,7 +17,7 @@ interface WorkItemLinkProps {
 const WorkItemLink = ({ src, tooltip, href }: WorkItemLinkProps) => (
   <TooltipProvider delayDuration={0}>
     <TooltipRoot>
-      <TooltipTrigger title={tooltip}>
+      <TooltipTrigger title={tooltip} tabIndex={-1}>
         <Link href={href} passHref>
           <a target="_blank">
             <Image
@@ -30,7 +30,9 @@ const WorkItemLink = ({ src, tooltip, href }: WorkItemLinkProps) => (
           </a>
         </Link>
       </TooltipTrigger>
-      <TooltipContent>{tooltip}</TooltipContent>
+      <TooltipContent side="top" sideOffset={4}>
+        {tooltip}
+      </TooltipContent>
     </TooltipRoot>
   </TooltipProvider>
 );

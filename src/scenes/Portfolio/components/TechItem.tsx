@@ -27,7 +27,7 @@ interface TechItemProps extends ComponentProps<typeof TechItemContainer> {
 const TechItem = ({ src, tooltip, ...props }: TechItemProps) => (
   <TooltipProvider delayDuration={0}>
     <TooltipRoot>
-      <TooltipTrigger title={tooltip}>
+      <TooltipTrigger tabIndex={-1} title={tooltip}>
         <TechItemContainer target="_blank" {...props}>
           <Image alt={`${{ tooltip }}-img`} src={src} width={32} height={32} />
         </TechItemContainer>

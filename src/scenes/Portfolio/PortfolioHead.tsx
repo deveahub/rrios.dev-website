@@ -10,20 +10,6 @@ const PortfolioHead = () => (
       name="description"
       content="Personal site of web and native apps developer Roberto Ríos, Freelancer, Typescript, React, NodeJS, React Native, System Design, Redux, Firebase and more."
     />
-    <meta name="twitter:card" content="summary" data-react-helmet="true" />
-    <meta name="twitter:creator" content="@rriosdev" data-react-helmet="true" />
-    <meta
-      name="twitter:title"
-      content="rriosdev | Web & Native Apps Freelancer"
-    />
-    <meta
-      name="twitter:description"
-      content="Personal site of Frontend Engineer José Manuel Lucas. React, Javascript, Testing, Functional Programming, Design, and more"
-    />
-    <meta
-      name="twitter:description"
-      content="Personal site of Frontend Engineer José Manuel Lucas. React, Javascript, Testing, Functional Programming, Design, and more"
-    />
   </Head>
 );
 
