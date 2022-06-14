@@ -1,5 +1,5 @@
 {
-  "name": "porner",
+  "name": "rrios-website",
   "private": true,
   "scripts": {
     "build": "next build && next export",
