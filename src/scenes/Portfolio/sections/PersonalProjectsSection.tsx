@@ -1,27 +1,19 @@
-import Stack from '@/components/Stack';
 import Section, {
   SectionContent,
   SectionTitle,
 } from '@/scenes/Portfolio/components/Section';
 
+import ProjectLink from '../components/ProjectLink';
+
 const PersonalProjectsSection = () => (
   <Section>
     <SectionTitle>Personal projects</SectionTitle>
     <SectionContent>
-      <Stack
-        css={{
-          p: 1,
-        }}
-      >
-        Make Palette!
-      </Stack>
-      <Stack
-        css={{
-          p: 1,
-        }}
-      >
-        Seed generator
-      </Stack>
+      <ProjectLink
+        image="/img/projects/palette-maker.jpeg"
+        url="https://palettemaker.rrios.dev/"
+        name="Palette Maker"
+      />
     </SectionContent>
   </Section>
 );
