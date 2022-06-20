@@ -8,7 +8,7 @@ import {
 } from '@/components/Tooltip';
 import { ComponentProps, styled } from '@/styles';
 
-const TechItemContainer = styled('a', {
+const TechItemLinkContainer = styled('a', {
   display: 'flex',
   p: 1,
   size: 10,
@@ -19,24 +19,25 @@ const TechItemContainer = styled('a', {
   backgroundColor: '$bg-desaturate',
 });
 
-interface TechItemProps extends ComponentProps<typeof TechItemContainer> {
+interface TechItemLinkProps
+  extends ComponentProps<typeof TechItemLinkContainer> {
   src: string;
   tooltip: string;
 }
 
-const TechItem = ({ src, tooltip, ...props }: TechItemProps) => (
+const TechItemLink = ({ src, tooltip, ...props }: TechItemLinkProps) => (
   <TooltipProvider delayDuration={0}>
     <TooltipRoot>
       <TooltipTrigger tabIndex={-1} title={tooltip}>
-        <TechItemContainer target="_blank" {...props}>
+        <TechItemLinkContainer target="_blank" {...props}>
           <Image alt={`${{ tooltip }}-img`} src={src} width={32} height={32} />
-        </TechItemContainer>
+        </TechItemLinkContainer>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={4}>
+      <TooltipContent side="top" sideOffset={8}>
         {tooltip}
       </TooltipContent>
     </TooltipRoot>
   </TooltipProvider>
 );
 
-export default TechItem;
+export default TechItemLink;

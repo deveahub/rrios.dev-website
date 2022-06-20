@@ -34,7 +34,7 @@ const SocialLinks = () => (
     <Icon title="github" href="https://github.com/rriosper" target="_blank">
       <GitHub height={22} />
     </Icon>
-    <Icon title="medium" href="https://github.com/rriosper" target="_blank">
+    <Icon title="medium" href="https://medium.com/@rriosdev" target="_blank">
       <img alt="medium" src="/img/mediumIcon.svg" />
     </Icon>
     <Icon title="linkedin" href="https://www.linkedin.com/in/rriosper/">

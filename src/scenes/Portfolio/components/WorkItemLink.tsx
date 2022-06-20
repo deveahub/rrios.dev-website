@@ -30,7 +30,7 @@ const WorkItemLink = ({ src, tooltip, href }: WorkItemLinkProps) => (
           </a>
         </Link>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={4}>
+      <TooltipContent side="top" sideOffset={8}>
         {tooltip}
       </TooltipContent>
     </TooltipRoot>
