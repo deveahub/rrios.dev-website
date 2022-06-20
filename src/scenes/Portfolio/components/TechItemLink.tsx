@@ -33,7 +33,7 @@ const TechItemLink = ({ src, tooltip, ...props }: TechItemLinkProps) => (
           <Image alt={`${{ tooltip }}-img`} src={src} width={32} height={32} />
         </TechItemLinkContainer>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={4}>
+      <TooltipContent side="top" sideOffset={8}>
         {tooltip}
       </TooltipContent>
     </TooltipRoot>
