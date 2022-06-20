@@ -25,7 +25,7 @@ const PersonalProjectsSection = () => (
         name="Seed generator"
       />
       <ProjectLink
-        image="https://raw.githubusercontent.com/rrios-dev/react-ui-kit/main/react-ui-kit.jpeg"
+        image="https://raw.githubusercontent.com/rrios-dev/react-ui-kit/main/react-ui-kit.webp"
         url="https://ui-kit.rrios.dev/"
         name="React UI Kit"
       />
