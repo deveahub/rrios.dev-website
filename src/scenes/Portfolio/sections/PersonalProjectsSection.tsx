@@ -20,12 +20,12 @@ const PersonalProjectsSection = () => (
         name="Palette Maker"
       />
       <ProjectLink
-        image="https://seed-generator.rrios.dev/seed-generator.jpeg"
+        image="https://seed-generator.rrios.dev/seed-generator.webp"
         url="https://seed-generator.rrios.dev/"
         name="Seed generator"
       />
       <ProjectLink
-        image="https://raw.githubusercontent.com/rrios-dev/react-ui-kit/main/react-ui-kit.webp"
+        image="https://raw.githubusercontent.com/rrios-dev/react-ui-kit/main/react-ui-kit.jpeg"
         url="https://ui-kit.rrios.dev/"
         name="React UI Kit"
       />
