@@ -21,7 +21,6 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
     'no-use-before-define': 'off',
-    'no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/no-unused-vars': 'warn',
     'react/require-default-props': 'off',

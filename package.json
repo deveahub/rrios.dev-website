@@ -6,7 +6,7 @@
     "commit": "cz",
     "dev": "next dev",
     "format": "prettier --ignore-unknown --config .prettierrc --write .",
-    "lint": "next lint",
+    "lint": "eslint src --ext ts,tsx --fix",
     "prepare": "husky install",
     "start": "next start",
     "translations:build": "node scripts/poeditorParser/main.js"
@@ -29,7 +29,6 @@
     "@testing-library/react": "^12.1.2",
     "@types/node": "^17.0.23",
     "@types/react": "17.0.37",
-    "@types/yup": "^0.29.13",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.16.0",
     "commitizen": "^4.2.4",
