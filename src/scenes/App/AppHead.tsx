@@ -14,7 +14,7 @@ const AppHead = () => (
     />
     <meta
       name="twitter:description"
-      content="Personal site of Frontend Engineer José Manuel Lucas. React, Javascript, Testing, Functional Programming, Design, and more"
+      content="Personal site of Frontend Engineer Roberto Ríos. React, Javascript, Testing, Functional Programming, Design, and more"
     />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
